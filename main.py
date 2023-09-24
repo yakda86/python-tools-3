@@ -14,6 +14,7 @@ storage_data={}
 
 def check_correct_data(data):
     """Проверка корректности полученного пакета."""
+    length = len(data)
     if len(data)!=2 or \
         None in data:
         return False
@@ -21,7 +22,6 @@ def check_correct_data(data):
 
 def check_correct_time(time):
     """Проверка корректности параметра времени."""
-    max_time=max(storage_data)
     if storage_data and \
         time<=max(storage_data):
         return False
